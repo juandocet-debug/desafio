@@ -34,7 +34,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 target.scrollIntoView({
                     behavior: 'smooth'
                 });
+                
+                // Close mobile menu if open
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
             }
         });
+    });
+
+    // Hamburger Menu Logic
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
     });
 });
